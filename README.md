@@ -58,7 +58,7 @@
     - **Authentication & Security**
       - **Diagram: JWT Validation & Token State Transitions**
 
-        ![JWT Validation & Token State Transitions](jwt_validation_state_flow.jpg)
+        ![JWT Validation & Token State Transitions](jwt_image-public.jpg)
 
       - JSON Web Tokens (JWT) (`jsonwebtoken` v9.0.2) — token-based authentication
       - `bcryptjs` (v3.0.2) — password hashing
@@ -139,7 +139,7 @@
 
 **Diagram: Supabase Schema (app_data, app_usage, app_runs)**
 
-![Supabase Schema](supabase_schema_app_data_usage_runs.png)
+![Supabase Schema](database-public.png)
 
 
 - **Tables in DB (well-defined entity relational model)**
@@ -160,4 +160,4 @@
 
 # AWS Deployment Layout (End-to-End)
 
-![AWS End-to-End Deployment Layout](aws_end_to_end_deployment_layout.jpg)
+![AWS End-to-End Deployment Layout](UR-aws-schematic-public.jpg)
