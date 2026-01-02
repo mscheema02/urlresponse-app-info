@@ -38,7 +38,7 @@
 
   **Diagram: Online Extractor Toggle & WebSocket Flow**
 
-  ![Online Extractor Toggle & WebSocket Flow](online_extractor_toggle_flow.jpg)
+  ![Online Extractor Toggle & WebSocket Flow](app_online-public.jpg)
 
     - Did not use NATS Jetstream or Apache Kafka because a server is required and a producer/consumer setup limits the amount of messages and connections, and does not work like a WebSocket connection (I still have experience trying these extensively to assess scalability and fit)
       - NATS Jetstream and Apache Kafka basically create a server and make producers and consumers; if code has a port and address to the server it communicates to it
