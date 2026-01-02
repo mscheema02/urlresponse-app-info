@@ -38,7 +38,7 @@
 
   **Diagram: Online Extractor Toggle & WebSocket Flow**
 
-  ![Online Extractor Toggle & WebSocket Flow](docs/images/online_extractor_toggle_flow.jpg)
+  ![Online Extractor Toggle & WebSocket Flow](online_extractor_toggle_flow.jpg)
 
     - Did not use NATS Jetstream or Apache Kafka because a server is required and a producer/consumer setup limits the amount of messages and connections, and does not work like a WebSocket connection (I still have experience trying these extensively to assess scalability and fit)
       - NATS Jetstream and Apache Kafka basically create a server and make producers and consumers; if code has a port and address to the server it communicates to it
@@ -58,7 +58,7 @@
     - **Authentication & Security**
       - **Diagram: JWT Validation & Token State Transitions**
 
-        ![JWT Validation & Token State Transitions](docs/images/jwt_validation_state_flow.jpg)
+        ![JWT Validation & Token State Transitions](jwt_validation_state_flow.jpg)
 
       - JSON Web Tokens (JWT) (`jsonwebtoken` v9.0.2) — token-based authentication
       - `bcryptjs` (v3.0.2) — password hashing
@@ -94,6 +94,8 @@
     - Uvicorn (v0.35.0+) — ASGI server
     - Pydantic (v2.11.7+) — data validation
 
+  ![Proxy server setup](proxy-setup-rough-public.jpg)
+  
 - **Xvfb server (virtualizes the browser without having to display)**
   - Cannot do Amazon DCV Web Client since it will disconnect after maximum session duration is typically 12 hours; there may be periods where the app is not being used, then it will run into errors deploying a headed browser
   - XFCE or GNOME is not viable because I would need XFCE with a VNC (Apache Guacamole easiest to use) to make it work; too many moving parts and defeats the purpose of lightweight XFCE
@@ -137,7 +139,7 @@
 
 **Diagram: Supabase Schema (app_data, app_usage, app_runs)**
 
-![Supabase Schema](docs/images/supabase_schema_app_data_usage_runs.png)
+![Supabase Schema](supabase_schema_app_data_usage_runs.png)
 
 
 - **Tables in DB (well-defined entity relational model)**
@@ -158,4 +160,4 @@
 
 # AWS Deployment Layout (End-to-End)
 
-![AWS End-to-End Deployment Layout](docs/images/aws_end_to_end_deployment_layout.jpg)
+![AWS End-to-End Deployment Layout](aws_end_to_end_deployment_layout.jpg)
